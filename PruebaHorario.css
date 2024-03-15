@@ -1,0 +1,253 @@
+@font-face
+{
+  font-family: letra;
+  src: url("Fonts/Beon-Regular.ttf");
+}
+
+:root
+{
+  --amber: #f3de2c;
+  --entorns: var(--amber);
+  --orange-pantone: #fb5607ff;
+  --sistemes: var(--orange-pantone);
+  --rose: #ff006eff;
+  --fol: var(--rose);
+  --blue-violet: #8338ecff;
+  --programacio: var(--blue-violet);
+  --azure: #00FFFF;
+  --databasemanagement: var(--azure);
+  --green: #04e762;
+  --llenguatge: var(--green);
+}
+
+.entorns:hover
+{
+  border: 1px solid var(--entorns);
+  text-shadow: 0 0 6px var(--entorns),
+  0 0 10px var(--entorns),
+  0 0 15px var(--entorns);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--entorns),
+  0 0 12px var(--entorns),
+  0 0 44px var(--entorns),
+  inset 0 0 20px var(--entorns);
+  cursor: pointer;
+}
+
+.fol:hover
+{
+  border: 1px solid var(--fol);
+  text-shadow: 0 0 6px var(--fol),
+  0 0 10px var(--fol),
+  0 0 15px var(--fol);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--fol),
+  0 0 12px var(--fol),
+  0 0 44px var(--fol),
+  inset 0 0 20px var(--fol);
+  cursor: pointer;
+}
+
+.pro:hover
+{
+  border: 1px solid var(--programacio);
+  text-shadow: 0 0 6px var(--programacio),
+  0 0 10px var(--programacio),
+  0 0 15px var(--programacio);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--programacio),
+  0 0 12px var(--programacio),
+  0 0 44px var(--programacio),
+  inset 0 0 20px var(--programacio);
+  cursor: pointer;
+}
+
+.dbm:hover
+{
+  border: 1px solid var(--databasemanagement);
+  text-shadow: 0 0 6px var(--databasemanagement),
+  0 0 10px var(--databasemanagement),
+  0 0 15px var(--databasemanagement);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--databasemanagement),
+  0 0 12px var(--databasemanagement),
+  0 0 44px var(--databasemanagement),
+  inset 0 0 20px var(--databasemanagement);
+  cursor: pointer;
+}
+
+.sist:hover
+{
+  border: 1px solid var(--sistemes);
+  text-shadow: 0 0 6px var(--sistemes),
+  0 0 10px var(--sistemes),
+  0 0 15px var(--sistemes);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--sistemes),
+  0 0 12px var(--sistemes),
+  0 0 44px var(--sistemes),
+  inset 0 0 20px var(--sistemes);
+  cursor: pointer;
+}
+
+.lleng:hover
+{
+  border: 1px solid var(--llenguatge);
+  text-shadow: 0 0 6px var(--llenguatge),
+  0 0 10px var(--llenguatge),
+  0 0 15px var(--llenguatge);
+  color: white;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px var(--llenguatge),
+  0 0 12px var(--llenguatge),
+  0 0 44px var(--llenguatge),
+  inset 0 0 20px var(--llenguatge);
+  cursor: pointer;
+}
+
+/*Horas y días*/
+div > div:nth-of-type(-n+8),
+div > div:nth-of-type(11),
+div > div:nth-of-type(15),
+div > div:nth-of-type(19),
+div > div:nth-of-type(23)
+{
+  background-color: #0D0D0D;
+  color: white;
+  text-shadow: 0px 0px 5px deeppink;
+  border: 2px solid deeppink;
+  box-shadow: 0 0 3px white,
+  0 0 3px white,
+  0 0 32px deeppink,
+  0 0 12px deeppink,
+  0 0 44px deeppink,
+  inset 0 0 20px deeppink;
+  font-size: 26px;
+}
+
+/*Clase con animación*/
+.parpadea
+{
+  animation-name: parpadeo;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo
+{
+  0% { opacity: 1.5; }
+  50% { opacity: 0.3; }
+  100% { opacity: 2.5 }
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0D;
+  text-align: center;
+  font-family: letra;
+  height: 100vh; /*unidades parte visibles de la página*/
+}
+
+/*Cuadrícula con grid*/
+body > div
+{
+  display: grid;
+  grid-template-columns: 100px repeat(5, 200px);
+  grid-template-rows: 40px repeat(6, 100px);
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
+
+/*Contenido de div*/
+div > div
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 19px;
+  font-size: 19px;
+  color: #808080;
+  flex-wrap: wrap;
+}
+
+/*Asignaturas 3 horas*/
+div > div:nth-of-type(9),
+div > div:nth-of-type(10),
+div > div:nth-of-type(12),
+div > div:nth-of-type(26)
+{
+  grid-row-end: span 3;
+}
+
+/*Asignaturas 2 horas*/
+div > div:nth-of-type(14),
+div > div:nth-of-type(16),
+div > div:nth-of-type(17),
+div > div:nth-of-type(18),
+div > div:nth-of-type(20),
+div > div:nth-of-type(21),
+div > div:nth-of-type(22),
+div > div:nth-of-type(25)
+{
+  grid-row-end: span 2;
+}
+
+/*Database management*/
+div > div:nth-of-type(10),
+div > div:nth-of-type(13),
+div > div:nth-of-type(18),
+div > div:nth-of-type(21)
+{
+  border: 2px solid #808080;
+}
+
+/*Programación*/
+div > div:nth-of-type(9),
+div > div:nth-of-type(17),
+div > div:nth-of-type(22)
+{
+  border: 2px solid #808080;
+}
+
+/*FOL*/
+div > div:nth-of-type(12)
+{
+  border: 2px solid #808080;
+}
+
+/*Entorns de desenvolupament*/
+div > div:nth-of-type(14),
+div > div:nth-of-type(24)
+{
+  border: 2px solid #808080;
+}
+
+/*Llenguatge de marques*/
+div > div:nth-of-type(16),
+div > div:nth-of-type(25)
+{
+  border: 2px solid #808080;
+}
+
+/*Sistemes informàtics*/
+div > div:nth-of-type(20),
+div > div:nth-of-type(26)
+{
+  border: 2px solid #808080;
+}
